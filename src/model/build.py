@@ -1,4 +1,6 @@
 import torch
+
+# Import the model class from the main file
 from src.MLP import MLP
 from src.AlexNet import AlexNet
 
