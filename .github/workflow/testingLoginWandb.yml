@@ -1,0 +1,26 @@
+name: Login to WandB
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  login:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+
+      - name: Install WandB
+        run: pip install wandb
+
+      - name: Login to WandB
+        env:
+          WANDB_API_KEY: ${{ secrets.WANDB_API_KEY }}
+        run: wandb login $WANDB_API_KEY
