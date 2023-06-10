@@ -1,0 +1,5 @@
+matplotlib==3.6.3
+statsmodels==0.13.5
+torch==2.0.1
+torchvision==0.15.2
+wandb==0.15.4

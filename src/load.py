@@ -12,7 +12,6 @@ args = parser.parse_args()
 if args.IdExecution:
     print(f"IdExecution: {args.IdExecution}")
 
-# Load Function
 def load(train_size=.8):
     """
     # Load the data
