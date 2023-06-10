@@ -2,7 +2,16 @@ import torch
 import torchvision
 from torch.utils.data import TensorDataset
 
+import argparse
 import wandb
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--IdExecution', type=str, help='ID of the execution')
+args = parser.parse_args()
+
+if args.IdExecution:
+    print(f"IdExecution: {args.IdExecution}")
+
 
 def load(train_size=.8):
     """
@@ -27,7 +36,7 @@ def load(train_size=.8):
 
 def load_and_log():
     # 🚀 start a run, with a type to label it and a project it can call home
-    with wandb.init(project="MLOps_Pycon2023",name="Experiment_0", job_type="load-data") as run:
+    with wandb.init(project="MLOps_Pycon2023",name=f"Experiment_{args.IdExecution}", job_type="load-data") as run:
         
         datasets = load()  # separate code for loading the datasets
         names = ["training", "validation", "test"]
