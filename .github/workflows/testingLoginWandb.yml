@@ -1,9 +1,7 @@
 name: Login to WandB
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch: # Allows manual execution only
 
 jobs:
   login:
