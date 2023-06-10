@@ -1,11 +1,11 @@
-name: Load Raw Data like artifact to wandb
+name: Preorocess Raw Data like artifact to wandb
 
 on:
   push:
     branches:
       - main
     paths:
-      - 'src/load.py'
+      - 'src/preprocess.py'
 
 jobs:
   load_data:
@@ -23,5 +23,5 @@ jobs:
         pip install -r requirements.txt
     - name: Login to WandB
       run: wandb login ${{ secrets.WANDB_API_KEY }}
-    - name: Run load.py
-      run: python src/load.py --IdExecution ${{ github.run_number }}
+    - name: Run preprocess.py
+      run: python src/preprocess.py --IdExecution ${{ github.run_number }}
