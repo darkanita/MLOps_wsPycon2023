@@ -1,14 +1,14 @@
-name: Preorocess Raw Data like artifact to wandb
+name: Preprocess Raw Data like artifact to wandb
 
 on:
   push:
     branches:
       - main
     paths:
-      - 'src/preprocess.py'
+      - 'src/data/preprocess.py'
 
 jobs:
-  load_data:
+  preprocess_data:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
@@ -24,4 +24,4 @@ jobs:
     - name: Login to WandB
       run: wandb login ${{ secrets.WANDB_API_KEY }}
     - name: Run preprocess.py
-      run: python src/preprocess.py --IdExecution ${{ github.run_number }}
+      run: python src/data/preprocess.py --IdExecution ${{ github.run_number }}

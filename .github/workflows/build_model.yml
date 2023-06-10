@@ -1,14 +1,14 @@
-name: Load Raw Data like artifact to wandb
+name: Build Model like artifact to wandb
 
 on:
   push:
     branches:
       - main
     paths:
-      - 'src/data/load.py'
+      - 'src/model/build.py'
 
 jobs:
-  load_data:
+  build_model:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
@@ -23,5 +23,5 @@ jobs:
         pip install -r requirements.txt
     - name: Login to WandB
       run: wandb login ${{ secrets.WANDB_API_KEY }}
-    - name: Run load.py
-      run: python src/data/load.py --IdExecution ${{ github.run_number }}
+    - name: Run build.py
+      run: python src/model/build.py --IdExecution ${{ github.run_number }}
