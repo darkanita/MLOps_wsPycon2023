@@ -62,6 +62,6 @@ def read(data_dir, split):
     return TensorDataset(x, y)
 
 steps = {"normalize": True,
-         "expand_dims": True}
+         "expand_dims": False}
 
 preprocess_and_log(steps)
