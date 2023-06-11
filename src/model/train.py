@@ -21,6 +21,7 @@ else:
 
 # Device configuration
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+print("Device: ", device)
 
 def read(data_dir, split):
     filename = split + ".pt"
