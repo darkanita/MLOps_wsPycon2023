@@ -58,6 +58,8 @@ Now that we know what MLOps is, let's see how we can implement MLOps in our Mach
 
 > Check this amazing site [mlops.toys](https://mlops.toys/) where you can know more about the different MLOps tools.
 
+> Check this amazing resource too [MLOps in Azure Machine Learning](https://github.com/Azure/mlops-v2)
+
 ## MLFlow
 
 MLflow is a platform for streamlining machine learning development, including tracking experiments, packaging code into reproducible runs, and sharing and deploying models. MLflow offers a set of lightweight APIs that can be used with any existing machine learning application or library (TensorFlow, PyTorch, XGBoost, etc.), wherever you currently run ML code (e.g., in notebooks, standalone applications, or in the cloud). The current components of MLflow are:
