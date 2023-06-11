@@ -1,6 +1,11 @@
 name: Preprocess Raw Data like artifact to wandb
 
 on:
+  workflow_run:
+    workflows: ["Load Raw Data like artifact to wandb"]
+    branches: [main]
+    types: 
+      - completed
   push:
     branches:
       - main
@@ -9,6 +14,7 @@ on:
 
 jobs:
   preprocess_data:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code

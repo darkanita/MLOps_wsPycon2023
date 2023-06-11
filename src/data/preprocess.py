@@ -61,6 +61,7 @@ def read(data_dir, split):
 
     return TensorDataset(x, y)
 
+# Configure preprocessing steps
 steps = {"normalize": True,
          "expand_dims": True}
 
