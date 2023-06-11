@@ -132,7 +132,7 @@ Now we will star our lab, this will be the process that we will deploy:
  1. First create an account in [wandb](https://wandb.ai/)
  2. Fork this [repo](https://github.com/darkanita/MLOps_wsPycon2023.git) in your github account.
  3. Configure secret to actions name it as WANDB_API_KEY
-![](media/GithubSecret.png)
+![](media\GithubSecret.png)
 4. To test local it is necessary login in the terminal, then execute:
 ```bash
 wandb login
