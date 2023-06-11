@@ -8,7 +8,7 @@ class Classifier(nn.Module):
     self.linear2 = nn.Linear(hidden_layer_1,hidden_layer_2)
     self.linear3 = nn.Linear(hidden_layer_2,num_classes)
 
-  def formard(self, x):
+  def forward(self, x):
     x = F.relu(self.linear1(x))
     x = F.relu(self.linear2(x))
     x = self.linear3(x)  # this is the score

@@ -21,7 +21,7 @@ if not os.path.exists("./model"):
     # If it doesn't exist, create it
     os.makedirs("./model")
 
-# Data parameters
+# Data parameters testing
 num_classes = 10
 input_shape = 784
 
