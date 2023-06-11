@@ -6,8 +6,6 @@ import os
 import argparse
 import wandb
 
-from src.utils import read
-
 parser = argparse.ArgumentParser()
 parser.add_argument('--IdExecution', type=str, help='ID of the execution')
 args = parser.parse_args()
@@ -57,13 +55,11 @@ def preprocess_and_log(steps):
 
         run.log_artifact(processed_data)
 
-"""
 def read(data_dir, split):
     filename = split + ".pt"
     x, y = torch.load(os.path.join(data_dir, filename))
 
     return TensorDataset(x, y)
-"""
 
 steps = {"normalize": True,
          "expand_dims": True}
