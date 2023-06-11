@@ -23,11 +23,23 @@ else:
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 print("Device: ", device)
 
+
 def read(data_dir, split):
+    """
+    Read data from a directory and return a TensorDataset object.
+
+    Args:
+    - data_dir (str): The directory where the data is stored.
+    - split (str): The name of the split to read (e.g. "train", "valid", "test").
+
+    Returns:
+    - dataset (TensorDataset): A TensorDataset object containing the data.
+    """
     filename = split + ".pt"
     x, y = torch.load(os.path.join(data_dir, filename))
 
     return TensorDataset(x, y)
+
 
 
 def train(model, train_loader, valid_loader, config):
@@ -137,7 +149,10 @@ def get_hardest_k_examples(model, testing_set, k=32):
 from torch.utils.data import DataLoader
 
 def train_and_log(config,experiment_id='99'):
-    with wandb.init(project="MLOps-Pycon2023", name=f"Train Model ExecId-{args.IdExecution} ExperimentId-{experiment_id}", job_type="train-model", config=config) as run:
+    with wandb.init(
+        project="MLOps-Pycon2023", 
+        name=f"Train Model ExecId-{args.IdExecution} ExperimentId-{experiment_id}", 
+        job_type="train-model", config=config) as run:
         config = wandb.config
         data = run.use_artifact('mnist-preprocess:latest')
         data_dir = data.download()
@@ -200,7 +215,7 @@ def evaluate_and_log(experiment_id='99',config=None,):
             [wandb.Image(hard_example, caption=str(int(pred)) + "," +  str(int(label)))
              for hard_example, pred, label in zip(hardest_examples, preds, true_labels)]})
 
-epochs = [50,100]
+epochs = [50,100,200]
 for id,epoch in enumerate(epochs):
     train_config = {"batch_size": 128,
                 "epochs": epoch,
