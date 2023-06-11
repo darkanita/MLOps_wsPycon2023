@@ -46,6 +46,7 @@ def build_model_and_log(config, model, model_name="MLP", model_description="Simp
 
 
 # MLP
+# Testing config
 model_config = {"input_shape":input_shape,
                 "hidden_layer_1": 32,
                 "hidden_layer_2": 64,
