@@ -47,10 +47,10 @@ def build_model_and_log(config, model, model_name="MLP", model_description="Simp
 
 # MLP
 model_config = {"input_shape":input_shape,
-                "num_classes":num_classes,
-                "hidden_layer_sizes": [32, 64],
-                "activation": "ReLU"}
+                "hidden_layer_1": 32,
+                "hidden_layer_2": 64,
+                "num_classes":num_classes}
 
-model = Classifier(input_shape, 32, 64, num_classes)
+model = Classifier(**model_config)
 
-build_model_and_log(model_config, model, "Linear","Simple Linear Classifier")
+build_model_and_log(model_config, model, "linear","Simple Linear Classifier")
