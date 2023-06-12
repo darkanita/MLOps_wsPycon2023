@@ -2,6 +2,15 @@
 
 This repository is a MLOps project that utilizes WandB to management the Machine Learning Lifecycle and GitHub Actions to orchestrate the different pipelines. The goal of this project is to provide a streamlined workflow for machine learning development, from data preparation to model deployment. WandB is used for experiment tracking and visualization, while GitHub Actions is used for continuous integration and deployment. With this setup, developers can easily track their experiments, collaborate with others, and deploy their models with confidence.
 
+## References to check
+
+> MLOps Toys Website [mlops.toys](https://mlops.toys/) where you can know more about the different tools.
+
+> Databricks and MLFlow: [MLOps - End 2 end pipeline](https://www.dbdemos.ai/demo-notebooks.html?demoName=mlops-end2end)
+
+> MLOps in Azure Machine Learning [MLOps-V2](https://github.com/Azure/mlops-v2)
+
+
 # Overview MLOps
 
 Before we begin to understand what MLOps is, let's first review the process of developing a Machine Learning model.
@@ -55,10 +64,6 @@ As we can see, there are different roles involved in the MLOps process:
 Now that we know what MLOps is, let's see how we can implement MLOps in our Machine Learning project.
 
 # Tools for MLOps
-
-> Check this amazing site [mlops.toys](https://mlops.toys/) where you can know more about the different MLOps tools.
-
-> Check this amazing resource too [MLOps in Azure Machine Learning](https://github.com/Azure/mlops-v2)
 
 ## MLFlow
 
@@ -141,3 +146,5 @@ wandb login
 ```
 You need to have the token.
 
+
+> **Note:** If you find this repository usefull give me a :star:, It makes me very happy :smiley: and it could be a motivation to create more content like this! :muscle:
