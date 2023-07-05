@@ -145,6 +145,6 @@ Now we will star our lab, this will be the process that we will deploy:
 wandb login
 ```
 You need to have the token.
-
+        
 
 > **Note:** If you find this repository usefull give me a :star:, It makes me very happy :smiley: and it could be a motivation to create more content like this! :muscle:
