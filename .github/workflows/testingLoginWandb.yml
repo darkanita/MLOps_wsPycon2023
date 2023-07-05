@@ -16,7 +16,7 @@ jobs:
           python-version: '3.9'
           cache: 'pip'
       - name: Install WandB
-        run: pip install wandb
+        run: pip install wandb==0.15.4
       - name: Login to WandB
         env:
           WANDB_API_KEY: ${{ secrets.WANDB_API_KEY }}
