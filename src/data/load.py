@@ -58,4 +58,5 @@ def load_and_log():
         # ✍️ Save the artifact to W&B.
         run.log_artifact(raw_data)
 
+# testing
 load_and_log()
