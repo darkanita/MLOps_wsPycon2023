@@ -4,8 +4,7 @@ This repository is a MLOps project that utilizes WandB to management the Machine
 
 ## References to check
 
-> Databricks and MLFlow: [MLOps - End 2 end pipeline](https://www.dbdemos.ai/demo-notebooks.html?demoName=mlops-end2end)
-
+> Databricks and MLFlow: [MLOps - End 2 end pipeline](https://notebooks.databricks.com/demos/mlops-end2end/index.html)
 > MLOps in Azure Machine Learning [MLOps-V2](https://github.com/Azure/mlops-v2)
 
 
