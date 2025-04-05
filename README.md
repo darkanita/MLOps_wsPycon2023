@@ -4,8 +4,6 @@ This repository is a MLOps project that utilizes WandB to management the Machine
 
 ## References to check
 
-> MLOps Toys Website [mlops.toys](https://mlops.toys/) where you can know more about the different tools.
-
 > Databricks and MLFlow: [MLOps - End 2 end pipeline](https://www.dbdemos.ai/demo-notebooks.html?demoName=mlops-end2end)
 
 > MLOps in Azure Machine Learning [MLOps-V2](https://github.com/Azure/mlops-v2)
