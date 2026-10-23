@@ -1,6 +1,6 @@
-numpy==1.26.4
-matplotlib==3.6.3
-statsmodels==0.13.5
-torch==2.0.1
-torchvision==0.15.2
-wandb==0.15.4
+numpy==2.5.4
+matplotlib==3.11.2
+statsmodels==0.15.0
+torch==2.14.1
+torchvision==0.29.1
+wandb==0.31.0
